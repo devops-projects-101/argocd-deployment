@@ -4,6 +4,12 @@ This repository contains the Kubernetes manifests for deploying the **Grade Subm
 
 ---
 
+## Retrieve Credentials
+
+```bash
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+```
+
 ## 🏗️ Project Overview
 
 This repository serves as the "source of truth" for the application's desired state. Any changes to the `deployment.yaml` file, such as updating the container image tag, will be automatically detected and applied to the target Kubernetes cluster by ArgoCD.
