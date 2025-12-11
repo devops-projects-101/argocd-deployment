@@ -17,7 +17,7 @@ spec:
       - name: ghcr-secret
       containers:
       - name: grade-submission-api
-        image: ghcr.io/devops-projects-101/js-app-k8s:1594b0932d028d2ec07e020fdff43cdcbfa36e78
+        image: nginx:latest
         ports:
         - containerPort: 3000
         resources:
